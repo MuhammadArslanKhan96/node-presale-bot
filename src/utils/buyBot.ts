@@ -37,7 +37,7 @@ export const botBuy = async (
   const walletKeypair = solConfig.BOT_KEYPAIR;
 
   console.log(presaleAuthority.toBase58(), "presale auth");
-  const idlFile = solConfig.idl;
+  const idlFile: any = solConfig.idl;
   const connection = new Connection(clusterApiUrl("devnet"), "confirmed");
 
   // Create provider with keypair

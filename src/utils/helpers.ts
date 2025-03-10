@@ -68,7 +68,8 @@ export async function getPresaleData(wallet: PublicKey) {
   }
   let program: any;
   try {
-    program = new anchor.Program(solConfig.idl, solConfig.PROGRAM_ID, provider);
+    let idlFile: any = solConfig.idl;
+    program = new anchor.Program(idlFile, solConfig.PROGRAM_ID, provider);
     console.log(program, "program");
   } catch (error: any) {
     console.log("in program", error.message);
