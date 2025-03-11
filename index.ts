@@ -8,6 +8,9 @@ import botRoutes from "./routes/bot";
 
 app.use(express.json());
 
+app.get("/", (req: Request, res: Response) => {
+  res.json({ message: "API is working!" });
+});
 // API route
 app.get("/api/data", (req: Request, res: Response) => {
   res.json({ message: "API is working!" });
