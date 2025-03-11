@@ -1,9 +1,8 @@
-import { clusterApiUrl, Connection, Keypair, PublicKey } from "@solana/web3.js";
-import idl from "../../idl.json";
-import { bs58 } from "@project-serum/anchor/dist/cjs/utils/bytes";
 import { Wallet } from "@project-serum/anchor";
+import { bs58 } from "@project-serum/anchor/dist/cjs/utils/bytes";
+import { Connection, Keypair, PublicKey } from "@solana/web3.js";
+import idl from "../../idl.json";
 // import { Wallet } from "@coral-xyz/anchor";
-import dotenv from "dotenv";
 // dotenv.config();
 
 const commitmentLevel = "confirmed";
@@ -28,7 +27,7 @@ export const solConfig = {
   endPoint: endPoint,
   connection: connection,
   PROGRAM_ID: new PublicKey(
-    process.env.PROGRAM_ID ?? "FhnmdDRURZHstrVCah8RpE5viGYzhakz4L6gsTCangs5"
+    process.env.PROGRAM_ID ?? "2DEZqmLrsD1Z49TmrwXmqf8nS1PEea6niR1RaY4kLaqS"
   ),
   PRESALE_SEED: process.env.PRESALE_SEED ?? "PRESALE_SEED",
   PRESALE_VAULT: process.env.PRESALE_VAULT ?? "PRESALE_VAULT",
