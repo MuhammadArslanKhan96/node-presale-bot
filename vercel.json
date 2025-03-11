@@ -14,8 +14,8 @@
   ],
   "crons": [
     {
-      "path": "/api/bot", 
-      "schedule":  "*/2 * * * *" 
+      "path": "/api/bot",
+      "schedule": "*/2 * * * *"
     }
   ]
 }
