@@ -1,3 +1,4 @@
+import { VercelRequest, VercelResponse } from "@vercel/node";
 import { Request, Response } from "express";
 import botRoutes from "./routes/bot";
 
@@ -17,6 +18,10 @@ app.get("/api/data", (req: Request, res: Response) => {
 });
 
 app.use("/api", botRoutes);
+
+export default async (req: VercelRequest, res: VercelResponse) => {
+  app(req, res);
+};
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
