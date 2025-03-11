@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
+import botRoutes from "./routes/bot";
 
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3003;
-import botRoutes from "./routes/bot";
 // const router = require("./routes/bot");
 
 app.use(express.json());
